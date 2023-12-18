@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 2em;
+            text-align: center;
+        }
+        #options {
+            display: flex;
+            justify-content: space-around;
+            width: 200px;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 1em;
+        }
+        #nao {
+            position: absolute;
+            transition: 0.6s ease;
+        }
+    </style>
+</head>
+<body>
+    <div>Você é a melhor namorada do mundo?</div>
+    <div id="options">
+        <button id="sim" onclick="this.style.backgroundColor = 'green'">Sim</button>
+        <button id="nao">Não</button>
+    </div>
+
+    <script>
+        document.getElementById('nao').addEventListener('mouseover', function() {
+            this.style.left = Math.random() * window.innerWidth + 'px';
+            this.style.top = Math.random() * window.innerHeight + 'px';
+        });
+    </script>
+</body>
+</html>
